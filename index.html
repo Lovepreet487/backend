@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body, iframe{
+	border:0;
+	padding:0;
+	margin:0;
+}
+iframe{
+	position:fixed;
+	height:100%;
+	width:100%;
+}
+</style>
+<title>Ecommerce App</title>
+<link rel="shortcut icon" type="image/x-icon" href="application/images/favicon.png" />
+</head>
+<body onload="loadApp()" oncontextmenu="return false;"><iframe src="application/"></iframe>
+</body>
+<script>
+ document.addEventListener('contextmenu', event => event.preventDefault());
+    document.onkeydown = function (e) {
+        if(e.keyCode == 123) {
+            return false;
+        }
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 73){
+            return false;
+        }
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+            return false;
+        }
+ 
+        // disable U key
+        if(e.ctrlKey && e.keyCode == 85) {
+            return false;
+        }
+    }
+function loadApp(){
+	window.location.hash='ecommerce';
+}
+</script>
+</html>
